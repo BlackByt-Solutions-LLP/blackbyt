@@ -208,8 +208,54 @@
     border-radius: 12px;
     transition: .5s;
 } */
+.products-image {
+    display: inline-flex;
+    gap: 1em;
+    margin-top: 5em;
+}
 .products-image .card {
-    background: #000;
+    position: relative;
+}
+.card .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.card .image img {
+    width: 100%;
+    transition: .5s;
+    border-radius: 12px;
+}
+.card:hover .image img {
+    opacity: .5;
+    transform: translateX(30%);
+    border-radius: 12px;
+}
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    /* background: #ffc107; */
+    background: #da524c;
+    border-radius: 12px 0 0 12px;
+    z-index: 2;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.card:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card .details .center {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Our Works */
@@ -241,9 +287,13 @@ footer{
 footer .footer-address{
     color: #cdcdcd;
 }
-footer .footer-address h4{
-    font-size: 1.6rem;
-    margin-bottom: 0.8em;
+footer .footer-address .footer-logo {
+    margin-bottom: 1.5em;
+}
+footer .footer-address .footer-logo img{max-height: 30px;margin-right: 12px;}
+footer .footer-address .footer-logo span{
+    font-size: 2.6rem;
+    font-weight: 700;
 }
 footer .footer-address p{
     line-height: 1.5rem;
@@ -281,10 +331,19 @@ footer .footer-links ul li a:hover{
 }
 
 /* Social Links */
+.social-links .email{
+    margin-bottom: 2em;
+    color: #da524c;
+    font-size: 1.4rem;
+    border: 1px solid #cdcdcd;
+    padding: 10px 20px;
+    outline: 0px;
+    border-radius: 8px;
+}
 .social-links h3{
     color: #cdcdcd;
     font-size: 1.5rem;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 .social-links img{
     margin-right: 1.8em;
@@ -390,3 +449,41 @@ footer .footer-links ul li a:hover{
     line-height: 3.5rem;
     color: #344650;
 }
+
+
+/* Button to Top */
+#button-top {
+    display: inline-block;
+    background-color: #da524c;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button-top::after {
+    content: "^";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button-top:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button-top:active {
+    background-color: #555;
+  }
+  #button-top.show {
+    opacity: 1;
+    visibility: visible;
+  }

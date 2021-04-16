@@ -17,8 +17,8 @@
                 <a href="index.html"><img src="images/logo.png" alt="blackbyt-logo"></a>
             </div>
             <div class="center-nav">
-                <a href="#">Products</a>
-                <a href="#">Services</a>
+                <a href="#products">Products</a>
+                <a href="#services">Services</a>
             </div>
             <div class="right-nav">
                 <div id="mySidebar" class="sidebar">
@@ -56,7 +56,7 @@
         </section>
 
         <!-- Our Services Section -->
-        <div class="service-section">
+        <div class="service-section" id="services">
             <section class="our-services">
                 <div class="section-title">Our Services</div>
                 <div class="about-us-text">
@@ -103,7 +103,7 @@
         </div>
 
         <!-- Our Products -->
-        <div class="product-section">
+        <div class="product-section" id="products">
             <section class="our-products">
                 <div class="section-title">Products</div>
                 <div class="about-us-text">
@@ -175,7 +175,7 @@
         <!-- Footer -->
         <footer class="main-footer">
             <div class="footer-address">
-                <h4><img src="images/trademark.png"> BLACKBYT</h4>
+                <div class="footer-logo"><img src="images/trademark.png"> <span>BLACKBYT</span></div>
                 <p>E2387, Phase-8A, Continental Tower, <br/> Mohali, Punjab</p>
                 <p>0172-5073084</p>
                 <ul>
@@ -194,6 +194,9 @@
                 </ul>
             </div>
             <div class="social-links">
+                <div class="email">
+                    hello@blackbyt.com
+                </div>
                 <h3>Connect</h3>
                 <div class="social-icons">
                     <a href="www.facebook.com"><img src="images/facebook.png" alt="facebook-icon"></a>
@@ -204,8 +207,11 @@
             </div>
         </footer>
 
+        <!-- Back to top button -->
+        <a id="button-top"></a>
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="files/script.js"></script>
 </body>
 </html>

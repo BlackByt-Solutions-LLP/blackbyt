@@ -25,6 +25,54 @@
 .right-nav img{
     max-width: 30px;
 }
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidebar a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar .sidebar-links{
+    margin-top: 3em;
+    text-align: right;
+    padding-right: 3em;
+}
+.sidebar .sidebar-links a{
+    margin-bottom: 2em;
+}
+.sidebar a:hover{
+    color: #f1f1f1;
+}
+.sidebar .closebtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    margin-left: 30px;
+}
+.openbtn{
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+.openbtn:hover{
+    /* background-color: #fff; */
+    border-radius: 8px;
+}
 
 /* hero-area */
 .hero-area{
@@ -38,6 +86,16 @@
     font-weight: bold;
     color: #344650;
 }
+.hero-area .main-heading #spin{color: #da524c; font-weight: 700;}
+.hero-area .main-heading #spin:after{
+    content: "";
+    animation: spin 5s linear infinite;
+}
+@keyframes spin{
+    0% { content:"DESIGN" }
+    50% { content:"CODE" }
+    100% { content:"BUILD" }
+}
 .hero-text .sub-heading{
     font-size: 2.2rem;
     margin-top: 0.6em;
@@ -47,7 +105,8 @@
 
 /* about-us */
 .about-us{
-    background: #EBECEE;
+    /* background: #EBECEE; */
+    background: #FBE9E7;
     padding: 8vw 6vw;
     display: flex;
     justify-content: center;
@@ -101,13 +160,56 @@
 .product-section{
     padding: 8vw 6vw;
 }
-.products-image {
+/* .products-image {
     margin-top: 5em;
-    display: flex;
-    justify-content: space-around;
+    display: inline-flex;
+    gap: 2rem;
+    overflow: hidden;
+    background: #344650;
+    height: 600px;
+    
 }
-.products-image img{
-    width: 46%;
+.products-image .figure{width: 50%;position: relative;}
+.products-image .figure .product-content{
+    position: absolute;
+    bottom: 0;left: 0;right: 0;
+    background: #ffffffe7;
+    padding: 4em;
+    display: none;
+    z-index: 1;
+}
+
+.products-image .card{position: absolute;}
+.products-image .card:hover .figure img{
+    opacity: .5;
+    transform: translateX(30%);
+}
+.products-image .card .product-content{
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: #ffc107;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.products-image .card:hover .product-content{
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.products-image .figure .product-content p{
+    line-height: 2rem;
+}
+.products-image .figure img{
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: .5s;
+} */
+.products-image .card {
+    background: #000;
 }
 
 /* Our Works */
@@ -117,16 +219,16 @@
 }
 .work-image {
     margin-top: 5em;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 20vw);
+    grid-gap: 15px;
 }
 .work-image img{
-    width: 23%;
-    border-radius: 4px;
-    height: 200px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 /* footer */
@@ -241,4 +343,50 @@ footer .footer-links ul li a:hover{
 .block-box .single-box p{
     font-size: 1.2rem;
     color:  #666;
+}
+
+/*====================
+==== our-services === 
+=====================*/
+.service-section{
+    padding: 8vw 6vw;
+}
+.our-services{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8em;
+}
+.section-title{
+    font-size: 2.5rem;
+    color: #344650;
+    width: 40vw;
+}
+.service-section .service-block{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.service-section .web-development{position: relative;}
+.service-section .graphic-design{position: relative;}
+.service-section .digital-market{position: relative;}
+.service-block img{
+    /* width: 50%; */
+    height: 100%;
+}
+.web-development .titles {position: absolute;left: 19vw;top: 4vh;}
+.graphic-design .titles {position: absolute;left: 0;top: 4vh;}
+.digital-market .titles {position: absolute;left: 22vw;top: 4vh;}
+
+.service-block .service-content{
+    /* position: relative; */
+    width: 50%;
+}
+.service-block .titles .light-title{font-size: 3.2rem;color: #666;}
+.service-block .titles .dark-title{font-size: 6rem;font-weight: 700;color: #344650;}
+.service-block p{
+    height: 100%;
+    padding: 30% 0%;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    color: #344650;
 }

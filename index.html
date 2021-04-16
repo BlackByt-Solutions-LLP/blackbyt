@@ -21,14 +21,25 @@
                 <a href="#">Services</a>
             </div>
             <div class="right-nav">
-                <a href="#"><img src="images/menu.png" alt=""></a>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="sidebar-links">
+                        <a href="about.html">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Clients</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+
+                <button class="openbtn" onclick="openNav()"><img src="images/menu.png" alt=""></button>
             </div>
         </nav>
 
+        <!-- Hero Area -->
         <section class="hero-area">
             <div class="hero-text">
-                <div class="main-heading">Main Heading Here</div>
-                <div class="sub-heading">Sub Heading Lorem ipsum</div>
+                <div class="main-heading">We love to <span id="spin"></span></div>
+                <div class="sub-heading">WE DESIGN · WE CODE · WE BUILD</div>
             </div>
             <div class="hero-image">
                 <img src="images/hero.png">
@@ -44,6 +55,53 @@
             </div>
         </section>
 
+        <!-- Our Services Section -->
+        <div class="service-section">
+            <section class="our-services">
+                <div class="section-title">Our Services</div>
+                <div class="about-us-text">
+                    <div class="top-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi facere quam natus, perferendis, consequuntur tempora fugiat sint placeat facilis pariatur vel. Quo quia nihil, iure deserunt nam enim quibusdam eveniet.</div>
+                </div>
+            </section>
+            
+            <!-- web-development -->
+            <div class="service-block web-development">
+                <img src="images/web.png" alt="">
+                <div class="titles">
+                    <span class="light-title">Custom</span> <br/>
+                    <span class="dark-title">Web Applications</span>
+                </div>
+                <div class="service-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nisi ipsum sapiente, eum vitae dolor dolorum debitis assumenda repellat sint repellendus? Ut, culpa dicta. Qui possimus quasi repellendus autem inventore!</p>
+                </div>
+            </div>
+
+            <!-- Design -->
+            <div class="service-block graphic-design">
+                <div class="service-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nisi ipsum sapiente, eum vitae dolor dolorum debitis assumenda repellat sint repellendus? Ut, culpa dicta. Qui possimus quasi repellendus autem inventore!</p>
+                </div>
+                <img src="images/graphic.png" alt="">
+                <div class="titles">
+                    <span class="light-title">Unique</span> <br/>
+                    <span class="dark-title">Creative Designs</span>
+                </div>
+            </div>
+
+            <!-- Digital-merketing -->
+            <div class="service-block digital-market">
+                <img src="images/content.png" alt="">
+                <div class="titles">
+                    <span class="light-title">Content Writing &</span> <br/>
+                    <span class="dark-title">Digital Marketing</span>
+                </div>
+                <div class="service-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nisi ipsum sapiente, eum vitae dolor dolorum debitis assumenda repellat sint repellendus? Ut, culpa dicta. Qui possimus quasi repellendus autem inventore!</p>
+                </div>
+            </div>
+
+        </div>
+
         <!-- Our Products -->
         <div class="product-section">
             <section class="our-products">
@@ -53,9 +111,33 @@
                     <div class="bottom-text">It is make a type specien book. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi facere quam natus, perferendis, consequuntur tempora fugiat sint placeat facilis pariatur vel.</div>
                 </div>
             </section>
+
             <div class="products-image">
-                <img src="images/1.png">
-                <img src="images/2.png">
+                <div class="card">
+                    <figure class="image">
+                        <img src="images/pofkorn.png">
+                    </figure>
+                    <div class="details">
+                        <div class="center">
+                            <h2>Pofkorn</h2><br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit unde, corrupti minima, eaque aliquam quibusdam soluta sequi necessitatibus ab aperiam nostrum tempora sunt quisquam? Hic, autem. Beatae omnis dignissimos debitis.</p><br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit unde, corrupti minima, eaque aliquam quibusdam soluta sequi necessitatibus ab aperiam nostrum tempora sunt quisquam? Hic, autem. Beatae omnis dignissimos debitis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure class="image">
+                        <img src="images/happybuying.png" onMouseOver="show_sidebar()" onMouseOut="hide_sidebar()">
+                    </figure>
+                    <div class="details">
+                        <div class="center">
+                            <h2>HappyBuying</h2><br>
+                            <h4>www.gohappybuying.com</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit unde, corrupti minima, eaque aliquam quibusdam soluta sequi necessitatibus ab aperiam nostrum tempora sunt quisquam? Hic, autem. Beatae omnis dignissimos debitis.</p><br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit unde, corrupti minima, eaque aliquam quibusdam soluta sequi necessitatibus ab aperiam nostrum tempora sunt quisquam? Hic, autem. Beatae omnis dignissimos debitis.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -69,14 +151,24 @@
                 </div>
             </section>
             <div class="work-image">
-                <img src="work/1.jpg">
-                <img src="work/2.jpg">
-                <img src="work/3.jpg">
-                <img src="work/4.jpg">
-                <img src="work/5.jpg">
-                <img src="work/6.jpg">
-                <img src="work/7.jpg">
-                <img src="work/8.jpg">
+                <figure class=”gallery__item">
+                    <img src="work/thumbs/1.jpg">
+                </figure>
+                <figure class=”gallery__item">
+                    <img src="work/thumbs/2.jpg">
+                </figure>
+                <figure class=”gallery__item">
+                    <img src="work/thumbs/3.jpg">
+                </figure>
+                <figure class=”gallery__item">
+                    <img src="work/thumbs/4.jpg">
+                </figure>
+                <figure class=”gallery__item">
+                    <img src="work/thumbs/5.jpg">
+                </figure>
+                <figure class=”gallery__item">
+                    <img src="work/thumbs/6.jpg">
+                </figure>
             </div>
         </div>
 
@@ -114,6 +206,6 @@
 
 
     </div>
-    <script src="script.js"></script>
+    <script src="files/script.js"></script>
 </body>
 </html>

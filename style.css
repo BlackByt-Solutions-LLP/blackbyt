@@ -63,7 +63,7 @@
     height: 60px;
     animation-delay: 0s;
     animation-duration: 18s;
-    background: rgba(116, 93, 248, 0.3);
+    background: rgba(218, 248, 46, 0.3);
 }
 
 .circles li:nth-child(5){
@@ -105,7 +105,7 @@
     height: 15px;
     animation-delay: 2s;
     animation-duration: 35s;
-    background: rgba(188, 233, 167, 0.3);
+    background: rgba(218, 248, 46, 0.3);
 }
 
 .circles li:nth-child(10){
@@ -114,7 +114,7 @@
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
-    background: rgba(188, 233, 167, 0.3);
+    background: rgba(96, 147, 255, 0.1);
 }
 
 
